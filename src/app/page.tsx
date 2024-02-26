@@ -131,9 +131,9 @@ export default function Home() {
       </div>
     );
   return (
-    <div className="flex flex-col gap-4 bg-black min-h-screen ">
+    <div className="flex flex-col gap-4 bg-orange-200 min-h-screen ">
       <Navbar location={data?.city.name} />
-      <main className="px-3 max-w-7xl bg-black mx-auto flex flex-col gap-9  w-full  pb-10 pt-4 ">
+      <main className="px-3 max-w-7xl bg-orange-200 mx-auto flex flex-col gap-9  w-full  pb-10 pt-4 ">
         {/* today data  */}
         {loadingCity ? (
           <WeatherSkeleton />
@@ -141,7 +141,7 @@ export default function Home() {
           <>
             <section className="space-y-4 ">
               <div className="space-y-2">
-                <h2 className="flex gap-1 text-2xl  items-end ">
+                <h2 className="flex gap-1 text-2xl  items-end text-white">
                   <p>{format(parseISO(firstData?.dt_txt ?? ""), "EEEE")}</p>
                   <p className="text-lg">
                     ({format(parseISO(firstData?.dt_txt ?? ""), "dd.MM.yyyy")})
